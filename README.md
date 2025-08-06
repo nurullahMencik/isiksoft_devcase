@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Harika! Beraber geliştirdiğimiz Işıksoft DevCase projesi için özel olarak hazırlanmış bir README.md dosyası taslağını aşağıda bulabilirsin. Bu taslak, hem projenin amacını, hem kullanılan teknolojileri, hem de nasıl çalıştırılacağını açıklıyor. Ayrıca, geliştirme sürecimizdeki önemli notları da içeriyor.
 
-## Getting Started
+Lütfen aşağıdaki metni kopyalayıp projenizin kök dizininde README.md adıyla kaydedin.
 
-First, run the development server:
+Markdown
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Işıksoft Frontend DevCase Projesi
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Bu proje, Işıksoft Frontend DevCase mülakat sürecinin bir parçası olarak geliştirilmiştir. Verilen Figma tasarımını temel alarak, modern bir ürün listeleme arayüzü oluşturmak ve frontend geliştirme yetkinliklerini sergilemek amacıyla React (Next.js) ve Tailwind CSS kullanılarak hazırlanmıştır.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Teknolojiler
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Bu projede kullanılan temel teknolojiler ve kütüphaneler:
 
-## Learn More
+* **Next.js 14+**: React tabanlı bir framework olup, Server Components, Routing, sunucu tarafı veri çekme ve optimizasyon yetenekleri için kullanılmıştır.
+* **React 18+**: Kullanıcı arayüzü oluşturmak için temel kütüphane.
+* **TypeScript**: Kodun okunabilirliğini, tip güvenliğini ve hata yakalamayı artırmak için kullanılmıştır.
+* **Tailwind CSS**: Hızlı ve duyarlı UI geliştirmesi için utility-first CSS framework.
+* **`fetch` API**: Ürün verilerini harici API'den çekmek için kullanılmıştır.
+* **`next/image`**: Resim optimizasyonu ve lazy loading için Next.js'in yerleşik Image componenti.
+* **`next/navigation` (`useRouter`, `useSearchParams`)**: Client-side navigasyon ve URL param
+``
+isiksoft-devcase/
+├── public/                         # Statik dosyalar (resimler, ikonlar vb.)
+│   └── favicon.ico
+├── src/                            # Ana uygulama kodları
+│   ├── app/                        # Next.js App Router yapısı
+│   │   ├── layout.tsx              # Uygulamanın temel HTML ve ana layout (Sidebar vb. içeren)
+│   │   └── page.tsx                # Ana ürün listeleme sayfası (Home component)
+│   ├── components/                 # Yeniden kullanılabilir UI bileşenleri
+│   │   ├── Pagination/             # Sayfalama bileşeni
+│   │   │   └── Pagination.tsx
+│   │   ├── ProductTable/           # Ürün tablosu bileşeni
+│   │   │   └── ProductTable.tsx    # (Product interface'i de burada tanımlı)
+│   │   └── StatsCard/              # İstatistik kartı bileşeni
+│   │       └── StatsCard.tsx
+│   ├── data/                       # Geçici (mock) veya sabit veri dosyaları
+│   │   └── mockProducts.ts         # Ürünler için mock veri
+│   ├── lib/                        # API servisleri, yardımcı fonksiyonlar vb.
+│   │   └── api.ts                  # API veri çekme fonksiyonu (getProducts)
+│   └── globals.css                 # Global CSS stilleri (Tailwind CSS importu burada)
+├── .git/                           # Git versiyon kontrol sistemi dosyaları (gizli)
+├── .gitignore                      # Git tarafından izlenmeyecek dosyalar/klasörler
+├── next.config.ts                  # Next.js yapılandırma dosyası (resim domainleri vb.)
+├── package.json                    # Proje bağımlılıkları ve scriptleri
+├── pnpm-lock.yaml                  # (veya package-lock.json / yarn.lock) Bağımlılık kilit dosyası
+├── postcss.config.js               # PostCSS yapılandırması (Tailwind için gerekli)
+├── README.md                       # Proje açıklaması ve talimatları
+├── tailwind.config.ts              # Tailwind CSS yapılandırma dosyası
+└── tsconfig.json                   # TypeScript yapılandırma dosyası``
 
-To learn more about Next.js, take a look at the following resources:
+## 📧 İletişim
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* **Geliştirici:** Nurullah Mencik
+* **E-posta:** nurullahmencik42@gmail.com
+* **GitHub Profilim ** [https://github.com/nurullahMencik](https://github.com/nurullahMencik)
