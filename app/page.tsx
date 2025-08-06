@@ -1,5 +1,3 @@
-
-
 // import { getProducts } from '@/lib/api'; // çalışmadı
 import Pagination from '@/components/Pagination/Pagination';
 import ProductTable from '@/components/ProductTable/ProductTable';

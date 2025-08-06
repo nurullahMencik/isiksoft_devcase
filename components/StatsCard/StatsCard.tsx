@@ -1,10 +1,9 @@
-// src/components/StatsCard/StatsCard.tsx
 import React from 'react';
 
 interface StatsCardProps {
   title: string;
   value: string | number;
-  valueColorClass?: string; // Tailwind text color class (e.g., 'text-green-600')
+  valueColorClass?: string; 
 }
 
 export default function StatsCard({ title, value, valueColorClass = 'text-gray-900' }: StatsCardProps) {

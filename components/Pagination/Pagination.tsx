@@ -1,5 +1,4 @@
-// src/components/Pagination/Pagination.tsx
-'use client'; // Bu component client-side etkileşimleri içerdiği için 'use client' direktifi ekliyoruz.
+'use client';
 
 import { useRouter, useSearchParams } from 'next/navigation';
 import React from 'react';
@@ -22,7 +21,7 @@ export default function Pagination({ currentPage, totalPages }: PaginationProps)
     router.push(`?${params.toString()}`);
   };
 
-  // Gösterilecek sayfa numaralarını belirle (basit bir yaklaşım)
+  // Gösterilecek sayfa numaralarını belirle 
   const pageNumbers = [];
   for (let i = 1; i <= totalPages; i++) {
     pageNumbers.push(i);

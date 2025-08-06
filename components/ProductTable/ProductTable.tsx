@@ -1,7 +1,7 @@
-// src/components/ProductTable/ProductTable.tsx
+
 import Image from 'next/image';
 
-// API'den gelen product tipi (tahmini) - BAŞINA EXPORT EKLENDİ!
+
 export interface Product {
   id: number;
   image: string;
@@ -13,7 +13,7 @@ export interface Product {
     count: number;
   };
   description: string;
-  status: 'Active' | 'Draft' | 'Pending'; // Figma'dan gözlemlediğimiz durumlar
+  status: 'Active' | 'Draft' | 'Pending'; 
 }
 
 interface ProductTableProps {
@@ -39,7 +39,6 @@ const ProductStatusBadge = ({ status }: { status: Product['status'] }) => {
       textColor = 'text-red-800';
       break;
     default:
-      // Varsayılan durum, eğer beklenmedik bir status gelirse
       bgColor = 'bg-gray-200';
       textColor = 'text-gray-800';
       break;
