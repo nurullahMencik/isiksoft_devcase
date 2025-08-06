@@ -1,12 +1,6 @@
-Harika! Beraber geliştirdiğimiz Işıksoft DevCase projesi için özel olarak hazırlanmış bir README.md dosyası taslağını aşağıda bulabilirsin. Bu taslak, hem projenin amacını, hem kullanılan teknolojileri, hem de nasıl çalıştırılacağını açıklıyor. Ayrıca, geliştirme sürecimizdeki önemli notları da içeriyor.
-
-Lütfen aşağıdaki metni kopyalayıp projenizin kök dizininde README.md adıyla kaydedin.
-
-Markdown
-
 # Işıksoft Frontend DevCase Projesi
 
-Bu proje, Işıksoft Frontend DevCase mülakat sürecinin bir parçası olarak geliştirilmiştir. Verilen Figma tasarımını temel alarak, modern bir ürün listeleme arayüzü oluşturmak ve frontend geliştirme yetkinliklerini sergilemek amacıyla React (Next.js) ve Tailwind CSS kullanılarak hazırlanmıştır.
+**Canlı Demo:** [https://isiksoft-devcase.vercel.app/](https://isiksoft-devcase.vercel.app/)
 
 ## 🚀 Teknolojiler
 
