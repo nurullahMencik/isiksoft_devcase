@@ -1,42 +1,27 @@
-// import { getProducts } from '@/lib/api'; // çalışmadı
-import Pagination from '@/components/Pagination/Pagination';
 import ProductTable from '@/components/ProductTable/ProductTable';
-import { mockApiData } from '@/data/mockProducts'; // Mock veri
+import Pagination from '@/components/Pagination/Pagination';
+import StatsCard from '@/components/StatsCard/StatsCard';
+import { mockApiData } from '@/data/mockProducts';
+import { Suspense } from 'react'; 
 
 export default async function Home() {
-  // const productData = await getProducts(1); // çalısmadı 
-  const productData = mockApiData; 
+  const productData = mockApiData;
   const products = productData.products;
 
-  const currentPage = productData.currentPage; // Mock veriden alıyoruz
-  const totalPages = productData.totalPages;   // Mock veriden alıyoruz
-
+  const currentPage = productData.currentPage;
+  const totalPages = productData.totalPages;
 
   return (
     <div className="container mx-auto">
       <h1 className="text-3xl font-bold text-gray-800 mb-6">Products Overview</h1>
 
-      {/* Stats Cards Placeholder */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-        <div className="bg-white p-6 rounded-lg shadow-sm">
-          <p className="text-gray-500 text-sm">Total Products</p>
-          <p className="text-2xl font-semibold text-gray-900 mt-1">{productData.totalProducts || '...'}</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-sm">
-          <p className="text-gray-500 text-sm">Total Pages</p>
-          <p className="text-2xl font-semibold text-blue-600 mt-1">{productData.totalPages || '...'}</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-sm">
-          <p className="text-gray-500 text-sm">Current Page</p>
-          <p className="text-2xl font-semibold text-yellow-600 mt-1">{productData.currentPage || '...'}</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-sm">
-          <p className="text-gray-500 text-sm">Items per Page</p>
-          <p className="text-2xl font-semibold text-green-600 mt-1">{products.length}</p>
-        </div>
+        <StatsCard title="Total Products" value={productData.totalProducts} />
+        <StatsCard title="New Products" value={`+${productData.itemsPerPage}`} valueColorClass="text-green-600" />
+        <StatsCard title="Total Pages" value={productData.totalPages} valueColorClass="text-blue-600" />
+        <StatsCard title="Current Page" value={productData.currentPage} valueColorClass="text-yellow-600" />
       </div>
 
-      {/* Product Management Header (Search, Filter, Add Product) */}
       <div className="bg-white p-6 rounded-lg shadow-sm mb-6">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-2xl font-semibold text-gray-800">Product List</h2>
@@ -58,11 +43,13 @@ export default async function Home() {
           </button>
         </div>
 
-        {/* Product Table */}
         <ProductTable products={products} />
-        {/* Pagination Component */}
-        {totalPages > 1 && ( // Eğer birden fazla sayfa varsa pagination'ı göster
-          <Pagination currentPage={currentPage} totalPages={totalPages} />
+
+ 
+        {totalPages > 1 && (
+          <Suspense fallback={<div>Loading pagination...</div>}> 
+            <Pagination currentPage={currentPage} totalPages={totalPages} />
+          </Suspense>
         )}
       </div>
     </div>

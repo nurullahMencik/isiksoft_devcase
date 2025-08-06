@@ -1,11 +1,9 @@
-// src/data/mockProducts.ts
-
-import { Product } from '@/components/ProductTable/ProductTable'; 
+import { Product } from '@/components/ProductTable/ProductTable';
 
 export const mockProducts: Product[] = [
   {
     id: 1,
-    image: 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
+    image: "/backpack.png", 
     title: 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops',
     category: 'men\'s clothing',
     price: 109.95,
@@ -14,11 +12,11 @@ export const mockProducts: Product[] = [
       count: 120
     },
     description: 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday gear...',
-    status: 'Active' // Mock veriye status ekleyelim
+    status: 'Active'
   },
   {
     id: 2,
-    image: 'https://fakestoreapi.com/img/71-3HjhnzGL._AC_SL1500_.jpg',
+    image: '/casual.png', 
     title: 'Mens Casual Premium Slim Fit T-Shirts',
     category: 'men\'s clothing',
     price: 22.3,
@@ -31,7 +29,7 @@ export const mockProducts: Product[] = [
   },
   {
     id: 3,
-    image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_SL1500_.jpg',
+    image: '/ceket.png', 
     title: 'Mens Cotton Jacket',
     category: 'men\'s clothing',
     price: 55.99,
@@ -44,7 +42,7 @@ export const mockProducts: Product[] = [
   },
   {
     id: 4,
-    image: 'https://fakestoreapi.com/img/71YXzeOuslL._AC_SL1500_.jpg',
+    image: '/t-shirt.png', 
     title: 'Mens Casual Slim Fit',
     category: 'men\'s clothing',
     price: 15.99,
@@ -57,11 +55,10 @@ export const mockProducts: Product[] = [
   }
 ];
 
-// API'nin döndüğü genel yapıya uygun hale getirelim:
 export const mockApiData = {
   products: mockProducts,
-  totalProducts: 20, // Toplam ürün sayısı (örneğin)
-  totalPages: 5,     // Toplam sayfa sayısı (örneğin) - burayı artırdık
-  currentPage: 1,    // Mevcut sayfa
-  itemsPerPage: 4    // Sayfa başına öğe sayısı
+  totalProducts: 20,
+  totalPages: 5,
+  currentPage: 1,
+  itemsPerPage: 4
 };
