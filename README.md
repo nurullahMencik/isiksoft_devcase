@@ -1,14 +1,6 @@
-Harika! git push komutunun sonunda başarılı olduğunu görmek beni sevindirdi. Projenin GitHub'a sorunsuz bir şekilde yüklendiğinden emin olabiliriz.
-
-Şimdi, projene özel olarak, yaptığımız tüm değişiklikleri ve eklemeleri içeren README.md dosyasının nihai halini veriyorum. Bu dosya, projenizi en iyi şekilde tanıtacak ve GitHub'da projenizin ana sayfası olacak.
-
-Lütfen aşağıdaki tüm metni kopyalayıp projenizin kök dizininde README.md adıyla kaydedin.
-
-Markdown
-
 # Işıksoft Frontend DevCase Projesi
 
-**Canlı Demo:** [CANLI_DEMO_URL_BURAYA] (Projenizi deploy ettikten sonra bu linki kendi canlı URL'iniz ile güncellemeyi unutmayın!)
+**Canlı Demo:** https://isiksoft-devcase-seven.vercel.app
 
 Bu proje, Işıksoft Frontend DevCase mülakat sürecinin bir parçası olarak geliştirilmiştir. Verilen Figma tasarımını temel alarak, modern bir ürün listeleme arayüzü oluşturmak ve frontend geliştirme yetkinliklerini sergilemek amacıyla React (Next.js) ve Tailwind CSS kullanılarak hazırlanmıştır.
 
