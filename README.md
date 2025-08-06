@@ -19,7 +19,7 @@ Bu projede kullanılan temel teknolojiler ve kütüphaneler:
 * **`fetch` API**: Ürün verilerini harici API'den çekmek için kullanılmıştır.
 * **`next/image`**: Resim optimizasyonu ve lazy loading için Next.js'in yerleşik Image componenti.
 * **`next/navigation` (`useRouter`, `useSearchParams`)**: Client-side navigasyon ve URL param
-``
+```
 isiksoft-devcase/
 ├── public/                         # Statik dosyalar (resimler, ikonlar vb.)
 │   └── favicon.ico
@@ -47,7 +47,7 @@ isiksoft-devcase/
 ├── postcss.config.js               # PostCSS yapılandırması (Tailwind için gerekli)
 ├── README.md                       # Proje açıklaması ve talimatları
 ├── tailwind.config.ts              # Tailwind CSS yapılandırma dosyası
-└── tsconfig.json                   # TypeScript yapılandırma dosyası``
+└── tsconfig.json                   # TypeScript yapılandırma dosyası
 
 ## 📧 İletişim
 
